@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco-Footprint Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 style="text-align: center; color: rgb(1, 1, 82); font-size: xx-large; padding: 20px;" >Eco-Footprint Questionnaire</h1>
+    
+    <div class="overlay">
+
+    <div class="container">
+        
+
+        <form id="ecoForm">
+            
+            <!-- Food & Diet Section -->
+            <div class="section">
+                <h1 style="color: rgba(6, 6, 104, 0.76); font-size: 64px;" > Water Use</h1><br>
+                <label>1. My shower (or bath) on a typical day is:</label>
+                <br>
+                <select name="shower"><br>
+                 <option value="0" ">No shower / no bath </option>
+                 <option value="25">Short shower 3-­4 time a week </option>
+                 <option value="50"> Short shower once a day </option>
+                    <option value="70"> Long shower once a day </option>
+                        <option value="90"> More than one shower per day </option>
+                    <!-- ... other options ... -->
+                </select><br><br>
+                <label>2. I flush the toilet:</label>
+        <br>
+        <select name="toilet_flush">
+            <option value="40">Every time I use it</option>
+            <option value="20">Sometimes</option>
+        </select>
+        <br><br>
+        
+        <label>3. When I brush my teeth, I let the water run:</label>
+        <br>
+        <select name="brush_teeth">
+            <option value="40">Yes</option>
+            <option value="0">No</option>
+        </select>
+        <br><br>
+        
+        <label>4. We use water­saving toilets:</label>
+        <br>
+        <select name="water_saving_toilets">
+            <option value="-20">Yes</option>
+            <option value="0">No</option>
+        </select>
+        <br><br>
+        
+        <label>5. We use low­flow showerheads:</label>
+        <br>
+        <select name="low_flow_showerheads">
+            <option value="-20">Yes</option>
+            <option value="0">No</option>
+        </select>
+        <br><br>
+        
+            <h1 style="color: rgba(6, 6, 104, 0.76); font-size: 64px;" > Food Habits</h1><br>
+            <label>1. On a typical day, I eat:</label>
+            <br>
+            <select name="eating">
+                <option value="600">Meat more than once per day</option>
+                <option value="400">Meat once per day</option>
+                <option value="300">Meat a couple times a week</option>
+                <option value="200">Vegetarian</option>
+                <option value="150">Vegan</option>
+            </select>
+            <br><br>
+            <label>2. _____ of my food is grown locally or is organic</label>
+            <br>
+            <select name="food-source">
+                <option value="0">All</option>
+                <option value="30">Some</option>
+                <option value="60">None</option>
+            </select>
+            <br><br>
+        
+            <label>3. I compost my fruit/vegetable scraps and peels.</label>
+            <br>
+            <select name="compost">
+                <option value="-20">Yes</option> 
+                 <option value="60">No</option>
+            </select>
+            <br><br>
+        
+            <label>4. _____ of my food is processed.</label>
+            <br>
+            <select name="processed-food">
+                <option value="100">All</option>
+                <option value="30">Some</option>
+                <option value="0">None</option>
+            </select>
+            <br><br>
+        
+            <label>5. _____ of my food has packaging.</label>
+            <br>
+            <select name="packaging">
+                <option value="100">All</option>
+                <option value="30">Some</option>
+                <option value="0">None</option>
+            </select>
+            <br><br>
+        
+            <label>6. On a typical day, I waste:</label>
+            <br>
+            <select name="food-waste">
+                <option value="0">None of my food</option>
+                <option value="25">One-fourth of my food</option>
+                <option value="50">One-third of my food</option>
+                <option value="100">Half of my food</option>
+            </select>
+            <h1 style="color: rgba(6, 6, 104, 0.76); font-size: 64px;" > Travel</h1><br>
+            <label>1. On a typical day, I travel to school by:</label>
+            <br>
+            <select name="school-travel">
+                <option value="0">Foot or bike</option>
+                <option value="30">Public transit / school bus</option>
+                <option value="100">Private vehicle; carpool</option>
+                <option value="200">Private vehicle; 1 student</option>
+            </select>
+            <br><br>
+        
+            <label>2. Our vehicle's fuel efficiency is</label>
+            <br>
+            <select name="fuel-efficiency">
+                <option value="-50">More than 30 miles/gallon</option>
+                <option value="50">24 - 30 miles/gallon</option>
+                <option value="100">17 - 23 miles/gallon</option>
+                <option value="200">Less than 17 miles/gallon</option>
+            </select>
+            <br><br>
+        
+            <label>3. The time I spend in vehicles on a typical day is:</label>
+            <br>
+            <select name="vehicle-time">
+                <option value="0">No time</option>
+                <option value="40">Less than half an hour</option>
+                <option value="100">Half an hour to 1 hour</option>
+                <option value="200">More than 1 hour</option>
+            </select>
+            <br><br>
+        
+            <label>4. How big is the car in which I travel on a typical day?</label>
+            <br>
+            <select name="car-size">
+                <option value="-20">No car</option>
+                <option value="50">Small</option>
+                <option value="100">Medium</option>
+                <option value="200">Large (SUV)</option>
+            </select>
+            <br><br>
+        
+            <label>5. Number of cars in our driveway?</label>
+            <br>
+            <select name="car-count">
+                <option value="-20">No car</option>
+                <option value="0">Less than 1 car per driver</option>
+                <option value="50">One car per driver</option>
+                <option value="100">More than 1 car per driver</option>
+                <option value="200">More than 2 cars per driver</option>
+            </select>
+            <br><br>
+        
+            <label>6. Number of flights I take per year?</label>
+            <br>
+            <select name="flight-count">
+                <option value="0">0</option>
+                <option value="200">1-2</option>
+                <option value="400">More than 2</option>
+            </select>
+            <h1 style="color: rgba(6, 6, 104, 0.76); font-size: 64px;" > House</h1><br>
+            <label>1. My house is:</label>
+            <br>
+            <select name="house-type">
+                <option value="50">Single house on large lot (suburbia)</option>
+                <option value="0">Single house on small lot (city)</option>
+                <option value="0">Townhouse/attached house</option>
+                <option value="-50">Apartment</option>
+            </select>
+            <br><br>
+        
+            <label>2. Divide number of rooms per person, no baths, by the number of people living at home.</label>
+            <br>
+            <select name="rooms-per-person">
+                <option value="-50">1 room per person or less</option>
+                <option value="0">1-2 rooms per person</option>
+                <option value="100">2-3 rooms per person</option>
+                <option value="200">More than 3 rooms per person</option>
+            </select>
+            <br><br>
+        
+            <label>3. We own a second, or vacation home that is often empty.</label>
+            <br>
+            <select name="second-home">
+                <option value="0">No</option>
+                <option value="200">We own/use it with others</option>
+                <option value="400">Yes</option>
+            </select>
+            <br><br>
+            <h1 style="color: rgba(6, 6, 104, 0.76); font-size: 64px;" > Energy</h1><br>
+            <label>1. In cold months, our house temperature is:</label>
+    <br>
+    <select name="house-temperature">
+        <option value="-20">Under 15°C (59°F)</option>
+        <option value="50">15 to 18°C (59 to 64°F)</option>
+        <option value="100">19 to 22°C (66 to 71°F)</option>
+        <option value="150">22°C (71°F) or more</option>
+    </select>
+    <br><br>
+
+    <label>2. We dry clothes outdoors or on an indoor rack.</label>
+    <br>
+    <select name="clothes-drying">
+        <option value="-50">Always</option>
+        <option value="20">Sometimes</option>
+        <option value="60">Never</option>
+    </select>
+    <br><br>
+
+    <label>3. We use an energy-efficient refrigerator.</label>
+    <br>
+    <select name="energy-efficient-refrigerator">
+        <option value="-50">Yes</option>
+        <option value="50">No</option>
+    </select>
+    <br><br>
+
+    <label>4. We have a second refrigerator / freezer.</label>
+    <br>
+    <select name="second-refrigerator">
+        <option value="100">Yes</option>
+        <option value="0">No</option>
+    </select>
+    <br><br>
+
+    <label>5. We use 5 or more compact fluorescent light bulbs.</label>
+    <br>
+    <select name="compact-fluorescent-bulbs">
+        <option value="-50">Yes</option>
+        <option value="100">No</option>
+    </select>
+    <br><br>
+
+    <label>6. I turn off lights, computer, and television when they're not in use.</label>
+    <br>
+    <select name="power-saving-habits">
+        <option value="0">Yes</option>
+        <option value="50">No</option>
+    </select>
+    <br><br>
+
+    <label>7. To cool off, I use:</label>
+    <br>
+    <select name="cooling-method">
+        <option value="50">Air conditioning: car</option>
+        <option value="100">Air conditioning: home</option>
+        <option value="-10">Electric fan</option>
+        <option value="-50">Nothing</option>
+    </select>
+    <br><br>
+
+            <label>8. My clothes washer is a:</label>
+            <br>
+            <select name="clothes-washer">
+                <option value="100">Top load</option>
+                <option value="50">Front load</option>
+                <option value="25">Laundromat</option>
+            </select>
+            <br><br>
+            <h1 style="color: rgba(6, 6, 104, 0.76); font-size: 64px;" >Clothings</h1><br>
+
+
+            <label>1. I change my outfit every day and put it in the laundry.</label>
+            <br>
+            <select name="outfit-change">
+                <option value="80">Yes</option>
+                <option value="0">No</option>
+            </select>
+            <br><br>
+        
+            <label>2. I am wearing clothes that have been mended or fixed.</label>
+            <br>
+            <select name="wearing-mended-clothes">
+                <option value="-20">Yes</option>
+                <option value="0">No</option>
+            </select>
+            <br><br>
+        
+            <label>3. One-fourth of my clothes are handmade or secondhand.</label>
+            <br>
+            <select name="handmade-secondhand-clothes">
+                <option value="-20">Yes</option>
+                <option value="0">No</option>
+            </select>
+            <br><br>
+        
+            <label>4. Most of my clothes are purchased new each year.</label>
+            <br>
+            <select name="purchased-new-clothes">
+                <option value="200">Yes</option>
+                <option value="0">No</option>
+            </select>
+            <br><br>
+        
+            <label>5. I give the local thrift store clothes that I no longer wear.</label>
+            <br>
+            <select name="give-thrift-store-clothes">
+                <option value="-50">Yes</option>
+                <option value="100">No</option>
+            </select>
+            <br><br>
+        
+            <label>6. I never wear _____ % of the clothes in my closet.</label>
+            <br>
+            <select name="never-wear-percentage">
+                <option value="25">Less than 25%</option>
+                <option value="50">50%</option>
+                <option value="75">75%</option>
+                <option value="100">More than 75%</option>
+            </select>
+            <br><br>
+        
+            <label>7. I buy _____ new pairs of shoes every year.</label>
+            <br>
+            <select name="buy-new-shoes">
+                <option value="0">0-1</option>
+                <option value="20">2 to 3</option>
+                <option value="60">4 to 6</option>
+                <option value="90">7 or more</option>
+            </select>
+            <br><br>
+            <h1 style="color: rgba(6, 6, 104, 0.76); font-size: 64px;" >Waste Management</h1><br>
+
+
+
+    <label>1. All my garbage from today could fit into a:</label>
+    <br>
+    <select name="garbage-size">
+        <option value="20">Shoebox</option>
+        <option value="60">Small garbage can</option>
+        <option value="200">Kitchen garbage can</option>
+        <option value="-50">No garbage created today!</option>
+    </select>
+    <br><br>
+
+    <label>2. I recycle all my paper, cans, glass and plastic.</label>
+    <br>
+    <select name="recycle-paper-cans">
+        <option value="-100">Yes</option>
+        <option value="0">No</option>
+    </select>
+    <br><br>
+
+    <label>3. I reuse items rather than throw them out.</label>
+    <br>
+    <select name="reuse-items">
+        <option value="-20">Yes</option>
+        <option value="0">No</option>
+    </select>
+    <br><br>
+
+    <label>4. I repair items rather than throw them out.</label>
+    <br>
+    <select name="repair-items">
+        <option value="-20">Yes</option>
+        <option value="0">No</option>
+    </select>
+    <br><br>
+
+    <label>5. I avoid disposable items as often as possible.</label>
+    <br>
+    <select name="avoid-disposable-items">
+        <option value="-50">Yes</option>
+        <option value="60">No</option>
+    </select>
+    <br><br>
+
+    <label>6. I use rechargeable batteries whenever I can.</label>
+    <br>
+    <select name="rechargeable-batteries">
+        <option value="-30">Yes</option>
+        <option value="0">No</option>
+    </select>
+    <br><br>
+
+    <label>7. In my home we have __ number of Electronics?</label>
+    <br>
+    <select name="electronics-count">
+        <option value="25">0-5</option>
+        <option value="75">5-10</option>
+        <option value="100">10-15</option>
+        <option value="200">More than 15</option>
+    </select>
+    <br><br>
+
+    <label>8. How much equipment is needed for typical activities?</label>
+    <br>
+    <select name="equipment-needed">
+        <option value="0">None</option>
+        <option value="20">Very little</option>
+        <option value="60">Some</option>
+        <option value="80">A lot</option>
+    </select>
+    <br><br>
+
+
+ 
+        </div>
+        
+        
+        
+        
+        <button type="submit" id="calculateButton">Calculate Eco-Footprint</button>
+        
+
+        </form>
+        
+        
+        <div id="result"></div>
+    </div>
+</div>
+    <div class ="image-box2">
+        
+  
+        <img src="assests/earth.svg" alt="Image 2">
+    
+  </div>
+  <div class ="image-box2">
+   <img src="assests/food.svg" alt="Image 2">
+
+</div>
+<div class ="image-box2">
+    <img src="assests/TRAVEL.svg" alt="Image 2">
+ 
+ </div>
+ <div class ="image-box2">
+    <img src="assests/house.svg" alt="Image 2">
+ 
+ </div>
+ 
+
+ <div class ="image-box2">
+    <img src="assests/fuel.svg" alt="Image 2">
+ 
+ </div>
+ <div class ="image-box2">
+    <img src="assests/earth3.svg" alt="Image 2">
+ 
+ </div>
+ <div class ="image-box2">
+    <img src="assests/About.svg" alt="Image 2">
+ 
+ </div>
+ <div class ="image-box2">
+    <img src="assests/garbage.svg" alt="Image 2">
+ 
+ </div>
+ <div class ="image-box2">
+    <img src="assests/5earth.svg" alt="Image 2">
+ 
+ </div>
+
+    <script src="scripts.js"></script>
+</body>

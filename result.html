@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco-Footprint Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+  <h1 style="text-align: center; color: rgb(1, 1, 82); font-size: xx-large; padding: 20px;" >Eco-Footprint</h1>
+    <h1><span id="ecoFootprintValue"></span></h1>
+   <div class="text">
+     <h2>If everyone lived like you it would </h2>
+        <h2 id="resultDivide"></h2>
+      <h2>Earths to support the 
+        people of the world.</h2> 
+   
+    
+    <p id="ecoFootprintValue"></p>
+<p id="resultDivide"></p>
+
+<script>
+    // Retrieve the calculated eco-footprint value from localStorage
+    let ecoFootprint = localStorage.getItem('ecoFootprint');
+    
+    // Convert the ecoFootprint value to a number
+    ecoFootprint = parseFloat(ecoFootprint);
+    
+    // Perform the division
+    const dividedValue = ecoFootprint / 300;
+    
+    // Display the original and divided values on the page
+    document.getElementById('ecoFootprintValue').textContent = `Your calculated eco-footprint is: ${ecoFootprint}`;
+    document.getElementById('resultDivide').textContent = `take: ${dividedValue}`;
+</script>
+
+</div>
+   
+    <div class ="image-box">
+      <img src="assests/new.svg" alt="Image 2">
+   
+   </div>
+   
+</body>
+</html>
