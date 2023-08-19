@@ -1,346 +1,293 @@
+/* Reset default margins and paddings for elements */
 body, h1, h2, h3, p, ul, li {
-    margin: 0;
-    padding: 0;
-   
-  }
-  
-  
-  /* Hide the menu initially */
-  .hamburger {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-     z-index: 5;
-    padding: 10px;
-    order: 2; /* Move the hamburger icon to the right side */
-  }
-  
-  .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #eae1e1;
-    margin: 3px 0;
-  }
-  
-  /* Add styles to make the hamburger icon visible */
-  .hamburger .bar {
-    background-color: #f8efef;
-    transition: 0.3s;
-  }
-  
-  /* Styles for the "open" hamburger icon (when menu is visible) */
-  .hamburger.open .bar:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
-  }
-  
-  .hamburger.open .bar:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .hamburger.open .bar:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
-  }
-  
-  /* Menu Bar */
-  #navbar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%; /* Set the width to 100% to cover the whole page */
-    height: 100%; /* Set the height to 100% to cover the whole page */
-    background-color: #333; /* Set the background color of the expanded menu */
-    z-index: 1;
-    opacity: 90%;
-    padding-top: 80px; /* Add some padding at the top to accommodate the hamburger icon */
-    transition: transform 0.3s ease; /* Add transition for smooth animation */
-    transform: translateY(-100%); /* Move the menu off the screen initially */
-  }
-  
-  #navbar.open {
-    transform: translateY(0); /* Move the menu back into the screen when open class is applied */
-  }
-  
-  #navbar ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px; /* Add some margin at the top to separate the menu items from the hamburger icon */
-  }
-  
-  #navbar li {
-    margin: 10px 0;
-  }
-  
-  #navbar li a {
-    text-decoration: none;
-    color: #1ca0ccdc;
-    
-    font-size: 20px; /* Adjust font size as needed */
-  }
-  
-  /* Responsive styles - show menu when viewport width is less than 768px */
-  @media screen and (max-width: 768px) {
-    .logo {
-      order: 1; /* Move the logo to the left side */
-      text-align: left; /* Align the logo and caption to the left */
-      padding-left: 20px; /* Add some padding to the left of the logo */
-    }
-  
-    #navbar {
-      display: none; /* Hide the menu initially on mobile */
-    }
-  
-    .hamburger {
-      order: 2; /* Move the hamburger icon to the right side on mobile */
-    }
-  
-    #navbar.open {
-      display: flex; /* Show the menu when open class is applied */
-    }
-  }
-  
-  
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #1ca0ccdc;
-    
-    padding: 10px;
-  }
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  overflow-x: hidden;
+}
 
 
-
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: rgba(95, 222, 227, 0.541)
-    
-    
-    
-}
-
-.container {
-   
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.464);
-    max-width: 1200px;
-    margin: 0 auto;
-    margin-top: 50px;
-    padding: 20px;
-    background-color: #9cedaf18;
-    z-index: 5;
-}
-
-h1, h2 {
-    text-align: center;
-}
-
-.section {
-      margin-left: 600px;
-      text-align-last: left;
-      
-   
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-}
-
-select {
   font-family: Arial, sans-serif;
-  font-size: 18px;
+  background-color: rgba(95, 222, 227, 0.541);
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* Style the option elements */
-select option {
-  font-family: Times New Roman, serif;
-  font-size: 22px;
-  color: blue;
-  margin: auto 10px; /* Change the color as desired */
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1ca0ccdc;
+  padding: 10px;
 }
 
-/* Style the label */
-label {
-  align-content: left;
-  font-family: Georgia, serif;
-  font-size: 32px;
-  color: rgba(6, 6, 104, 0.76); /* Change the color as desired */
+/* Hamburger Styles */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 5;
+  padding: 10px;
+  order: 2;
 }
 
-button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #28a745;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #eae1e1;
+  margin: 3px 0;
 }
 
-button:hover {
-    background-color: #218838;
+/* Styles for the open hamburger icon */
+.hamburger.open .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
 }
 
-
- .image-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 0px;
-    z-index: -1;
-    
-  }
-  .image-box2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 0px;
-    z-index: -1;
-    width: 1000px; /* Adjust the width as needed */
-    height: 500px; /* Automatically adjust height based on image proportions */
-    
-    padding: 10px;
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
 }
 
-.image-box2 img {
-    max-width: 100%; /* Ensure the image fits within the container */
-    height: auto; /* Automatically adjust height based on image proportions */
-}
-  .button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 0px;
-    margin-bottom: 0px;
-   
+.hamburger.open .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
 }
 
+/* Menu Bar */
+#navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  z-index: 1;
+  opacity: 90%;
+  padding-top: 80px;
+  transition: transform 0.3s ease;
+  transform: translateY(-100%);
+}
+
+#navbar.open {
+  transform: translateY(0);
+}
+
+#navbar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#navbar li {
+  margin: 10px 0;
+}
+
+#navbar li a {
+  text-decoration: none;
+  color: #1ca0ccdc;
+  font-size: 20px;
+}
+
+/* Content Styles */
+.content {
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+/* Main Title Styles */
+.main-title {
+  color: rgb(4, 50, 90);
+  font-weight: bolder;
+  font-size: xx-large;
+}
+
+/* Text Styles */
+.text {
+  color: #081178;
+  margin-top: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 30px;
+  background-color: rgba(165, 195, 247, 0.3);
+  padding: 10px;
+}
+
+/* Subtitle Styles */
+.subtitle {
+  color: rgb(6, 54, 96);
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 0;
+}
+
+/* Button Styles */
+.button1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Image Item Styles */
 .image-item img {
-    margin-top: 0;      /* Ensure the image starts immediately after the last content */
-    width: 150px;       /* Adjust this to your preferred width */
-    height: 150px;      /* Adjust this to your preferred height */
-    object-fit: cover;  /* Use object-fit to ensure images cover without stretching */
-    /* transition: transform 0.3s ease; */
-    animation: breathing 3s infinite alternate;
+  margin-top: 0;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  animation: breathing 3s infinite alternate;
 }
+
 @keyframes breathing {
   0% {
       transform: scale(1);
   }
   50% {
-      transform: scale(1.5); /* You can adjust this value for a more pronounced effect */
+      transform: scale(1.5);
   }
   100% {
       transform: scale(1);
   }
 }
-  
-  
-  .image-item img:hover {
-    transform: scale(0.9);
-  }
-  @media (min-width: 600px) {
-    .image-box {
-        flex-direction: row;
-        justify-content: space-around;
-    }
-    .image-item img {
-        margin-bottom: 0;
-    }
-    .text
-    { color: #081178;
-      margin-top: 10px;
-      margin-left: 30%;
-      margin-right: 30%;
-      margin-bottom: 30px;
-      background-color: rgba(165, 195, 247, 0.3);
-      padding: 10px;
-    }
-    @media screen and (max-width: 600px) {
 
-      /* Adjust font sizes for better readability on mobile */
-      body {
-          font-size: 14px;
-      }
-      
-      h1, h2, h3 {
-          font-size: 24px;
-      }
-  
-      p, ul, li {
-          font-size: 16px;
-      }
-  
-      /* Increase button size for touch accessibility */
-      button {
-          padding: 15px;
-      }
-  
-      /* Adjust container for mobile views */
-      .container {
-          padding: 10px;
-      }
-  
-      /* Adjust the navbar styles for mobile */
-      #navbar ul {
-          margin-top: 10px; 
-      }
-  
-      #navbar li {
-          margin: 8px 0;
-      }
-  
-      #navbar li a {
-          font-size: 18px;
-      }
-  
-      /* Adjust the logo and hamburger for mobile */
-      .logo {
-          padding-left: 10px;
-      }
-  
-      .hamburger {
-          padding: 8px;
-      }
-  
-      .bar {
-          width: 20px;
-          height: 2.5px;
-          margin: 2px 0;
-      }
-  
-      /* Adjust text class for mobile */
-      .text {
-          margin-left: 10%;
-          margin-right: 10%;
-          margin-bottom: 20px;
-      }
-      .image-box {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 10px; /* You can adjust this as needed */
-    }
-      /* Adjust image-item properties for mobile */
-      .image-item img {
-          width: 100px;       /* Reduce image size for mobile */
-          height: 100px;
-      }
-  }
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-     /* Semi-transparent overlay */
-    color: #ffffff;
-    text-align: center;
-    padding: 20px;
-    z-index: 1; /* Overlay is on top of the image */
+.image-item img:hover {
+  transform: scale(0.9);
 }
+
+/* Image Box Styles */
+.image-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+.container {
+   
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.464);
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 10px;
+  background-color: #9cedaf18;
+  z-index: 5;
+}
+.section {
+  margin-left: 6px;
+  text-align-last: left;
   
- 
+
+padding-bottom: 10px;
+margin-bottom: 10px;
+}
+
+select {
+font-family: Arial, sans-serif;
+font-size: 18px;
+}
+
+/* Style the option elements */
+select option {
+font-family: Times New Roman, serif;
+font-size: 22px;
+color: blue;
+margin: auto 10px; /* Change the color as desired */
+}
+
+/* Style the label */
+label {
+align-content: left;
+font-family: Georgia, serif;
+font-size: 32px;
+color: rgba(6, 6, 104, 0.76); /* Change the color as desired */
+}
+
+button {
+display: block;
+width: 100%;
+padding: 10px;
+background-color: #28a745;
+color: #fff;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+button:hover {
+background-color: #218838;
+}
+.image-box2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0px;
+  z-index: -1;
+  width: 100%; /* Adjust the width as needed */
+  height: 100%; /* Automatically adjust height based on image proportions */
+  
+  padding: 10px;
+}
+
+.image-box2 img {
+  max-width: 100%; /* Ensure the image fits within the container */
+  height: auto; /* Automatically adjust height based on image proportions */
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+   /* Semi-transparent overlay */
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  z-index: 1; /* Overlay is on top of the image */
+}
+@media screen and (max-width: 768px) {
+  .main-title {
+    font-size: larger;
+  }
+  .text {
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  .subtitle {
+    padding: 5px;
+  }
+  .button1,
+  .image-box {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .image-item img {
+    width: 80px;
+    height: 80px;
+  }
+  label {
+    font-size: 18px;
+  }
+  .image-box2 {
+    margin-top: 5px; /* Adjust margin for smaller screens */
+    padding: 5px;
+  }
+
+  /* Style the option elements for smaller screens */
+  select option {
+    font-size: 16px; /* Adjust font size for smaller screens */
+    margin: auto 5px; /* Adjust margin for smaller screens */
+  }
+  h1 {
+    font-size: 24px; /* Adjust font size for smaller screens */
+  }
 }
