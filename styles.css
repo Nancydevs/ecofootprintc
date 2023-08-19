@@ -113,8 +113,8 @@ header {
 .text {
   color: #081178;
   margin-top: 10px;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 10px;
+  margin-right: 10px;
   margin-bottom: 30px;
   background-color: rgba(165, 195, 247, 0.3);
   padding: 10px;
